@@ -9,3 +9,15 @@ public:
 	char nama[20];
 	node* next;
 };
+
+class list
+{
+	node* start;
+	public :
+		list();
+		void addNode();
+		bool search(int nim, node** current, node** previous);
+		bool listempty();
+		bool delnode(int element);
+		void traverse();
+};
