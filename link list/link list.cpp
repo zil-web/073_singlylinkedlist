@@ -158,6 +158,52 @@ int main()
 			else
 				cout << endl << "Data dengan nomor mahasiswa" << nim << "berhasil disapus :";
 		}
+		break;
+		case'3':
+		{
+			mhs.traverse();
+		}
+		break;
+		case '4':
+		{
+			if (mhs.listempty() == true)
+			{
+				cout << "\nList kosong\n";
+				break;
+			}
+			node* previous, * current;
+			cout << endl << "Masukkan no mahasiswa yang dicari : ";
+			cin >> nim;
+
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		}
 
