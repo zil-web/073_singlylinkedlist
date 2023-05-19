@@ -21,3 +21,9 @@ class list
 		bool delnode(int element);
 		void traverse();
 };
+
+list::list()
+{
+	start = NULL;
+}
+
