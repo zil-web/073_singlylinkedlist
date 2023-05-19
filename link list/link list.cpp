@@ -41,7 +41,7 @@ void list::addNode()/*menambah sebuah node kedalam list*/
 
 	if (START == NULL || nim <= START->noMhs)
 	{
-		if ((START == NULL || nim <= START->noMhs)){
+		if ((START != NULL || nim <= START->noMhs)){
 			cout << "\nDuplikasi noMhs tidak diijinkan\n";
 			return;
 		}
@@ -72,7 +72,7 @@ void list::addNode()/*menambah sebuah node kedalam list*/
 
 }
 
-bool list::search(int nim, node** previous, node** current)
+bool list::listempty()
 {
 	if (START == NULL)
 		return true;
@@ -195,37 +195,8 @@ int main()
 		{
 			cout << "pilihan salah !." << endl;
 		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		break;
 		}
-
 	}
 }
 	
