@@ -62,9 +62,24 @@ void list::addNode()/*menambah sebuah node kedalam list*/
 			return;
 		}
 		previous = current;
+		current = current->next;
+
 
 	}
-			
-			
+		/*jika Loop diatas dieksekusi, previous dan current akan menempati posisi dimana*/
+	nodeBaru->next = current;
+	previous->next = nodeBaru;			
 
+}
+
+bool list::search(int nim, node** previous, node** current)
+{
+	*previous = START;
+	*current = START;
+	while ((*current != NULL) && (nim != (*current)->noMhs))
+	{
+		*previous = *current;
+		*current = (*current)->next;
+	}
+	return(*current != NULL);
 }
