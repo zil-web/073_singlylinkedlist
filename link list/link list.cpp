@@ -174,7 +174,26 @@ int main()
 			node* previous, * current;
 			cout << endl << "Masukkan no mahasiswa yang dicari : ";
 			cin >> nim;
+			if (mhs.search(nim, &previous, &current) == false)
+				cout << endl  << "Data tidak ditemukan" << endl;
+			else
+			{
+				cout << endl << "Data ditemukan" << endl;
+				cout << "\nNo mahasiswa: " << current->noMhs;
+				cout << "\n\nNama: " << current->nama;
+				cout << "\n";
+			}
 
+		}
+		break;
+		case '5':
+		{
+			exit(0);
+		}
+		break;
+		default:
+		{
+			cout << "pilihan salah !." << endl;
 		}
 
 
