@@ -74,6 +74,26 @@ void list::addNode()/*menambah sebuah node kedalam list*/
 
 bool list::search(int nim, node** previous, node** current)
 {
+	if (START == NULL)
+		return true;
+	else
+		return false;	
+}
+bool list::delnode(int nim)/*menghapus node dari dalam list*/
+{
+	node* current, * previous;
+	if (search(nim, &previous, &current) == false)
+		return false;
+	previous->next = current->next;
+	if (current == START)
+		START = START->next;
+
+	delete current;
+	return true;
+}
+/*check apakah node yang dimaksud ada didalam list atau tidak*/
+bool list::search(int nim, node** previous, node** current)
+{
 	*previous = START;
 	*current = START;
 	while ((*current != NULL) && (nim != (*current)->noMhs))
@@ -83,3 +103,8 @@ bool list::search(int nim, node** previous, node** current)
 	}
 	return(*current != NULL);
 }
+	
+
+
+
+
