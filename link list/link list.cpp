@@ -103,6 +103,23 @@ bool list::search(int nim, node** previous, node** current)
 	}
 	return(*current != NULL);
 }
+
+void list::traverse()/*mengunjungi dan membaca dalam list*/
+{
+
+	if (listempty())
+		cout << "\nlist kosong\n";
+	else
+	{
+		cout << endl << "Data didalam list adalah:" << endl;
+		node* currentNode;
+		for (currentNode = START; currentNode != NULL; currentNode = currentNode->next) {
+			cout << currentNode->noMhs << "  " << currentNode->nama << "\n";
+		}
+		cout << endl;
+
+	}
+}
 	
 
 
